@@ -5,6 +5,8 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { useState } from "react";
 
+import ptbr from "date-fns/locale/pt-BR"
+
 function SalesCard() {
 
     const min = new Date(new Date().setDate(new Date().getDate() - 365));
@@ -25,6 +27,7 @@ function SalesCard() {
                         onChange={(date: Date) => setMinDate(date)}
                         className="moonmeta-form-control"
                         dateFormat="dd/MM/yyyy"
+                        locale={ptbr}
                     />
                 </div>
                 <div className="moonmeta-form-control-container">
@@ -33,6 +36,7 @@ function SalesCard() {
                         onChange={(date: Date) => setMaxDate(date)}
                         className="moonmeta-form-control"
                         dateFormat="dd/MM/yyyy"
+                        locale={ptbr}
                     />
                 </div>
             </div>
@@ -54,7 +58,7 @@ function SalesCard() {
                         <tr>
                             <td className="show992">#341</td>
                             <td className="show576">08/07/2022</td>
-                            <td>Anakin</td>
+                            <td>Vendedor 1</td>
                             <td className="show992">15</td>
                             <td className="show992">11</td>
                             <td>R$ 55300.00</td>
@@ -67,7 +71,7 @@ function SalesCard() {
                         <tr>
                             <td className="show992">#341</td>
                             <td className="show576">08/07/2022</td>
-                            <td>Anakin</td>
+                            <td>Vendedor 2</td>
                             <td className="show992">15</td>
                             <td className="show992">11</td>
                             <td>R$ 55300.00</td>
@@ -80,7 +84,7 @@ function SalesCard() {
                         <tr>
                             <td className="show992">#341</td>
                             <td className="show576">08/07/2022</td>
-                            <td>Anakin</td>
+                            <td>Vendedor 3</td>
                             <td className="show992">15</td>
                             <td className="show992">11</td>
                             <td>R$ 55300.00</td>
