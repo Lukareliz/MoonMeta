@@ -38,6 +38,7 @@ public class SmsService {
 		
 		String msg = "O vendedor " + sale.getSellerName() + " foi destaque em " + date
 			    + " com um total de R$ " + new DecimalFormat("#,##0.00").format(sale.getAmount());
+
 		Twilio.init(twilioSid, twilioKey);
 
 		PhoneNumber to = new PhoneNumber(twilioPhoneTo);
